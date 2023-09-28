@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;600;700&family=League+Spartan:wght@200;400;500;600;700&family=Sancreek&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 3px solid black;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: #ffff;
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: "Cairo", cursive;
+  letter-spacing: 0.5rem;
+}
+
+header {
+  padding-top: 5rem;
+  min-height: 20vh;
+}
+
+header,
+form {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  font-family: "Cairo";
+  /* letter-spacing: 0.1rem; */
+  outline: none;
+  padding: 0.2rem;
+  padding-left: 0.8rem;
+  font-size: 1.5rem;
+  border: none;
+  background-color: #ffff;
+}
+
+form button {
+  color: #f07b3f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+form button:hover {
+  color: beige;
+  background: #f07b3f;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  color: black;
+  background-color: #ffff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.todo-items {
+  font-family: "Cairo";
+  flex: 1;
+}
+
+.check-btn,
+.del-btn {
+  background-color: #ffff;
+
+  color: red;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.del-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.check-btn {
+  color: rgb(6, 172, 6);
+}
+
+.check-btn:hover {
+  background-color: rgb(6, 172, 6);
+  color: white;
+}
+
+.todo-items {
+  padding: 0rem 0.5rem;
+}
+
+.fa-circle-check,
+.fa-circle-xmark {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  /* transform: translateY(8rem) rotateZ(20deg); */
+  transform: translateX(15rem);
+  opacity: 0;
+}
+
+@media (max-width: 770px) {
+  .todo-list {
+    min-width: 80%;
+  }
+}
